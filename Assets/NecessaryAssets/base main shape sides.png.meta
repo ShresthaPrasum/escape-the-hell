@@ -116,9 +116,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 1977
-        width: 1147
-        height: 275
+        y: 2005
+        width: 290
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: base main shape sides_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 1636
-        width: 1147
-        height: 275
+        x: 338
+        y: 2005
+        width: 290
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: base main shape sides_2
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1263
-        width: 1147
-        height: 275
+        x: 628
+        y: 2005
+        width: 290
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: base main shape sides_3
       rect:
         serializedVersion: 2
-        x: 215
-        y: 834
-        width: 962
-        height: 371
+        x: 918
+        y: 2005
+        width: 290
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: base main shape sides_6
       rect:
         serializedVersion: 2
-        x: 136
-        y: 456
-        width: 993
-        height: 323
+        x: 628
+        y: 1675
+        width: 290
+        height: 253
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,12 +225,12 @@ TextureImporter:
       name: base main shape sides_7
       rect:
         serializedVersion: 2
-        x: 57
-        y: 15
-        width: 1142
-        height: 378
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 921
+        y: 1673
+        width: 281
+        height: 253
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3535002}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,6 +239,270 @@ TextureImporter:
       bones: []
       spriteID: 4226e619833ead545bd25abcbea6f5d5
       internalID: 194691547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1675
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377286bd024d7304b88fea1a132bd15e
+      internalID: 1631518543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1675
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4769627209a6046a910742e3198982
+      internalID: -393389435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_21
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 916
+        width: 290
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f61f84974c8cc443838ac47521190df
+      internalID: 338811520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_22
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 916
+        width: 290
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed56a9997ab1854ebb0b0f358ec2946
+      internalID: -1274016137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_23
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 916
+        width: 251
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1454eafd4f6da94593ac23393c224ea
+      internalID: -637293756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_25
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 528
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bdf159eb96507479082d75d25ddc9b
+      internalID: 1577651035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_26
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 526
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84afc2caffdcf4418ea536e9856b1f3
+      internalID: -2059516899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_27
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 523
+        width: 220
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587c12caea1e64848a66162afa9ccec0
+      internalID: -822160224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_28
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 138
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31427cf8cee68f24d84a1320569729dd
+      internalID: 651672015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_29
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 139
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a008600f2f9966428a69717df3359d2
+      internalID: -28509864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_30
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 138
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78455c8ab4232047ab3102b5cda8a06
+      internalID: 143405487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_31
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 138
+        width: 290
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143e0f3124c15444183110c78732802e
+      internalID: -1765407198
       vertices: []
       indices: 
       edges: []
@@ -259,16 +523,40 @@ TextureImporter:
       - key: SpriteEditor.SliceOnImport
         value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":290.0,"y":253.0},"gridSpriteOffset":{"x":48.0,"y":51.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       base main shape sides_0: -1149954718
       base main shape sides_1: 972243114
+      base main shape sides_10: -1019356184
+      base main shape sides_11: -800334021
+      base main shape sides_12: -1641226774
+      base main shape sides_13: 1050457211
+      base main shape sides_14: 69151448
+      base main shape sides_15: 218300634
+      base main shape sides_16: 1758414099
+      base main shape sides_17: -813014952
+      base main shape sides_18: -1301703715
+      base main shape sides_19: 638982599
       base main shape sides_2: -1104204301
+      base main shape sides_20: 453268596
+      base main shape sides_21: 338811520
+      base main shape sides_22: -1274016137
+      base main shape sides_23: -637293756
+      base main shape sides_24: -1205382157
+      base main shape sides_25: 1577651035
+      base main shape sides_26: -2059516899
+      base main shape sides_27: -822160224
+      base main shape sides_28: 651672015
+      base main shape sides_29: -28509864
       base main shape sides_3: -115141321
+      base main shape sides_30: 143405487
+      base main shape sides_31: -1765407198
       base main shape sides_4: 1631518543
       base main shape sides_5: -393389435
       base main shape sides_6: 1692858756
       base main shape sides_7: 194691547
+      base main shape sides_8: 591561920
+      base main shape sides_9: 1157566871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
