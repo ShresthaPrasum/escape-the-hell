@@ -115,10 +115,10 @@ TextureImporter:
       name: base main shape sides_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 2005
-        width: 290
-        height: 253
+        x: 155
+        y: 2061
+        width: 183
+        height: 173
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,6 +503,50 @@ TextureImporter:
       bones: []
       spriteID: 143e0f3124c15444183110c78732802e
       internalID: -1765407198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_8
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2223
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777604486904edd4ea496294fcbdc52b
+      internalID: 591561920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base main shape sides_9
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1392
+        width: 944
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d1cacc8c52b234b821d0dbf3cccff8
+      internalID: 1157566871
       vertices: []
       indices: 
       edges: []
