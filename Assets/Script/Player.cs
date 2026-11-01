@@ -7,15 +7,19 @@ public class SlingshotPlayer : MonoBehaviour
     public int maxAirJumps = 1;
     public Transform groundCheck;
     public float checkRadius = 0.35f;
-    public LayerMask whatIsGround;
-    public float groundStopSpeed = 10f;
+    public LayerMask groundlayer;
+    public float stopSpeed = 10f;
 
     public LineRenderer pullLine;
+
+    public float pullLineMulti = 1.5f;
     public LineRenderer trajectoryLine;
     public int trajectoryPoints = 25;
     public float timeStep = 0.05f;
-    public float airSlowMoScale = 0.25f;
-    public float maxSqueeze = 0.3f;
+    public float maxTrajectoryLength = 5f;
+    public float airSlowMotion = 0.25f;
+    public float maxSqueeze = 0f;
+    public Animator anim; 
 
     private Rigidbody2D rb;
     private Camera mainCam;
@@ -23,12 +27,14 @@ public class SlingshotPlayer : MonoBehaviour
     private Vector2 currentLaunchVelocity;
     private bool isDragging = false;
     private bool isGrounded = false;
+    private bool wasGrounded = false; 
     private int airJumpsLeft;
     private Vector3 originalScale;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (anim == null) anim = GetComponent<Animator>();
         mainCam = Camera.main;
         originalScale = transform.localScale;
         airJumpsLeft = maxAirJumps;
@@ -39,7 +45,31 @@ public class SlingshotPlayer : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        
+        wasGrounded = isGrounded;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundlayer);
+
+        
+        
+        if (!wasGrounded && isGrounded)
+        {
+            if (anim != null){
+                anim.SetBool("Landed", true);
+                anim.SetBool("InAir", false);
+            }
+
+        }
+        
+        else if (wasGrounded && !isGrounded)
+        {
+            if (anim != null){
+                anim.SetBool("Landed", false);
+                anim.SetBool("InAir", true);
+            }
+        }
+
+        
+        if (anim != null) anim.SetBool("isGrounded", isGrounded);
 
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
         {
@@ -71,7 +101,7 @@ public class SlingshotPlayer : MonoBehaviour
     {
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
         {
-            float newX = Mathf.Lerp(rb.linearVelocity.x, 0f, Time.fixedDeltaTime * groundStopSpeed);
+            float newX = Mathf.Lerp(rb.linearVelocity.x, 0f, Time.fixedDeltaTime * stopSpeed);
             rb.linearVelocity = new Vector2(newX, rb.linearVelocity.y);
         }
     }
@@ -81,8 +111,11 @@ public class SlingshotPlayer : MonoBehaviour
         isDragging = true;
         dragStartPos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
-        if (pullLine != null) pullLine.enabled = true;
-        if (trajectoryLine != null) trajectoryLine.enabled = true;
+        
+        if (anim != null){
+            anim.SetBool("StartDrag", true);
+            anim.SetBool("Release", false);
+        }
 
         if (!isGrounded)
         {
@@ -93,13 +126,36 @@ public class SlingshotPlayer : MonoBehaviour
     void UpdateDrag()
     {
         Vector2 currentMousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+
         Vector2 rawPull = dragStartPos - currentMousePos;
+
         Vector2 clampedPull = Vector2.ClampMagnitude(rawPull, maxDragDistance);
 
         currentLaunchVelocity = clampedPull * launchPower;
 
-        DrawPullLine(clampedPull);
-        DrawTrajectory(transform.position, currentLaunchVelocity);
+        bool holdingCtrl = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
+
+        if (holdingCtrl)
+        {
+            if (pullLine != null) pullLine.enabled = false;
+
+            if (trajectoryLine != null)
+            {
+                trajectoryLine.enabled = true;
+                DrawTrajectory(transform.position, currentLaunchVelocity);
+            }
+        }
+        else
+        {
+            if (trajectoryLine != null) trajectoryLine.enabled = false;
+
+            if (pullLine != null)
+            {
+                pullLine.enabled = true;
+                DrawPullLine(clampedPull);
+            }
+        }
+
         ApplySqueeze(clampedPull.magnitude / maxDragDistance);
 
         if (!isGrounded)
@@ -115,6 +171,12 @@ public class SlingshotPlayer : MonoBehaviour
 
         if (pullLine != null) pullLine.enabled = false;
         if (trajectoryLine != null) trajectoryLine.enabled = false;
+
+        
+        if (anim != null){
+            anim.SetBool("Release", true);
+            anim.SetBool("StartDrag", false);
+        }
 
         if (currentLaunchVelocity.magnitude > 1.5f)
         {
@@ -133,10 +195,11 @@ public class SlingshotPlayer : MonoBehaviour
         if (pullLine == null) return;
 
         pullLine.positionCount = 2;
-        Vector3 playerPos = transform.position;
-        Vector3 pullEndPos = playerPos - (Vector3)clampedPull;
+        
+        Vector3 startPos = new Vector3(dragStartPos.x, dragStartPos.y, 0f);
+        Vector3 pullEndPos = startPos - new Vector3(clampedPull.x*pullLineMulti, clampedPull.y*pullLineMulti, 0f);
 
-        pullLine.SetPosition(0, playerPos);
+        pullLine.SetPosition(0, startPos);
         pullLine.SetPosition(1, pullEndPos);
     }
 
@@ -144,14 +207,35 @@ public class SlingshotPlayer : MonoBehaviour
     {
         if (trajectoryLine == null) return;
 
-        trajectoryLine.positionCount = trajectoryPoints;
         Vector2 gravity = Physics2D.gravity * rb.gravityScale;
+        trajectoryLine.positionCount = 1;
+        trajectoryLine.SetPosition(0, startPos);
 
-        for (int i = 0; i < trajectoryPoints; i++)
+        float totalDistance = 0f;
+        Vector2 prevPos = startPos;
+
+        for (int i = 1; i < trajectoryPoints; i++)
         {
             float t = i * timeStep;
             Vector2 pointPos = startPos + (startVelocity * t) + (0.5f * gravity * t * t);
+            float segmentDist = Vector2.Distance(prevPos, pointPos);
+
+            
+            if (totalDistance + segmentDist >= maxTrajectoryLength)
+            {
+                float remaining = maxTrajectoryLength - totalDistance;
+                Vector2 dir = (pointPos - prevPos).normalized;
+                Vector2 clampedEndPos = prevPos + dir * remaining;
+
+                trajectoryLine.positionCount = i + 1;
+                trajectoryLine.SetPosition(i, clampedEndPos);
+                break;
+            }
+
+            totalDistance += segmentDist;
+            trajectoryLine.positionCount = i + 1;
             trajectoryLine.SetPosition(i, pointPos);
+            prevPos = pointPos;
         }
     }
 
@@ -159,7 +243,7 @@ public class SlingshotPlayer : MonoBehaviour
     {
         if (active)
         {
-            Time.timeScale = airSlowMoScale;
+            Time.timeScale = airSlowMotion;
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
         }
         else
