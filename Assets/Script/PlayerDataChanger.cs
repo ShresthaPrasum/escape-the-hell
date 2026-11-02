@@ -7,6 +7,8 @@ public class PlayerDataChanger : MonoBehaviour
     public Transform player;
     public Image fillImage;
     public GameObject visualRoot;
+
+    public GameObject doubleJumpSignalVisual;
     public GameObject gameObjectToDeactivate;
     public SlingshotPlayer slingshotPlayer;
     public float interactDistance = 2.5f;
@@ -89,6 +91,7 @@ public class PlayerDataChanger : MonoBehaviour
         }
 
         slingshotPlayer.maxAirJumps = 1;
+        doubleJumpSignalVisual.SetActive(true);
         Debug.Log("Activated!");
         onActivated?.Invoke();
     }
