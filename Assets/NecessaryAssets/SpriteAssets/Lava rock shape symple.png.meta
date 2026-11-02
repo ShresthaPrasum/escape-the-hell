@@ -115,12 +115,12 @@ TextureImporter:
       name: Lava rock shape symple_0
       rect:
         serializedVersion: 2
-        x: 317
-        y: 294
-        width: 1272
-        height: 340
+        x: 429
+        y: 422
+        width: 875
+        height: 212
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
