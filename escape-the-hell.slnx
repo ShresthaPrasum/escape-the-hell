@@ -1,5 +1,3 @@
-<Solution>
-  <Project Path="AllIn1SpriteShaderAssembly.csproj" />
+﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="UnityEngine.UI.csproj" />
 </Solution>
