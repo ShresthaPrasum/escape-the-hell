@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    public GameObject spriteRenderer;
 
     private bool isActivated = false;
 
@@ -21,18 +21,15 @@ public class CheckPoint : MonoBehaviour
 
             foreach (CheckPoint cp in allCheckpoints)
             {
-                cp.DeactivateCheckPoint();
+                if (cp != this)
+                {
+                    Destroy(cp.gameObject);
+                }
             }
             
             isActivated = true;
 
         }
-
-    }
-
-    public void DeactivateCheckPoint()
-    {
-        isActivated =false;
 
     }
 
