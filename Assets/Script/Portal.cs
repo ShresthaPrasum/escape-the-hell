@@ -1,12 +1,20 @@
 using UnityEngine;
 
-public class respawnPlayer : MonoBehaviour
+using UnityEngine.SceneManagement;
+
+public class Portal : MonoBehaviour
 {
     public Animator animator;
 
-    public GameObject canvas;
+    public GameObject talkPortal;
 
     public GameObject player;
+
+    public string NextSceneName;
+
+    public float timeToLoad = 1f;
+
+    public GameObject portal;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +22,13 @@ public class respawnPlayer : MonoBehaviour
         {
             animator.SetTrigger("OnCollision");
             player.SetActive(false);
-            canvas.SetActive(true);
+            
+            Invoke("LoadNextScene", timeToLoad);
         }
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(NextSceneName);
     }
 }

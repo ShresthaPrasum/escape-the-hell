@@ -55,10 +55,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float: 6.29
+    - _Float: 145.54
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _fogSize: 148.3
+    - _fogSize: 76.2
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _fogColor: {r: 1.6245048, g: 0, b: 0, a: 0.8745098}
