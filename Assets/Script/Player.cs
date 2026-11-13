@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SlingshotPlayer : MonoBehaviour
 {
+
+    [Header("Slingshot properties")]
     public float launchPower = 14f;
     public float maxDragDistance = 3.5f;
     public int maxAirJumps = 1;
@@ -10,6 +12,8 @@ public class SlingshotPlayer : MonoBehaviour
     public LayerMask groundlayer;
     public float stopSpeed = 10f;
 
+
+    [Header("Aim Assist")]
     public LineRenderer pullLine;
 
     public float pullLineMulti = 1.5f;
@@ -21,6 +25,13 @@ public class SlingshotPlayer : MonoBehaviour
     public float maxSqueeze = 0f;
     public Animator anim; 
 
+    [Header("Visual Effects")]
+    public ParticleSystem smokeTrail;
+
+    public float PlayerSpeedToEmitSmoke = 1.5f;
+
+
+    [Header("Private variables")]
     private Rigidbody2D rb;
     private Camera mainCam;
     private Vector2 dragStartPos;
@@ -34,13 +45,29 @@ public class SlingshotPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (anim == null) anim = GetComponent<Animator>();
+
+        if (anim == null){
+            anim = GetComponent<Animator>();
+        }
+
         mainCam = Camera.main;
         originalScale = transform.localScale;
         airJumpsLeft = maxAirJumps;
 
-        if (pullLine != null) pullLine.enabled = false;
-        if (trajectoryLine != null) trajectoryLine.enabled = false;
+        if (pullLine != null){
+            pullLine.enabled = false;
+        }
+
+        if (trajectoryLine != null){
+            trajectoryLine.enabled = false;
+        }
+
+        if (smokeTrail != null)
+        {
+            var emission = smokeTrail.emission;
+            
+            emission.enabled = false;
+        }
     }
 
     void Update()
@@ -74,6 +101,14 @@ public class SlingshotPlayer : MonoBehaviour
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
         {
             airJumpsLeft = maxAirJumps;
+        }
+
+        if(smokeTrail != null)
+        {
+            bool isFlying = !isGrounded && rb.linearVelocity.magnitude > PlayerSpeedToEmitSmoke;
+
+            var emission = smokeTrail.emission;
+            emission.enabled = isFlying;
         }
 
         if (Input.GetMouseButtonDown(0) && (isGrounded || airJumpsLeft > 0))
@@ -170,6 +205,7 @@ public class SlingshotPlayer : MonoBehaviour
         SetSlowMotion(false);
 
         if (pullLine != null) pullLine.enabled = false;
+        
         if (trajectoryLine != null) trajectoryLine.enabled = false;
 
         
@@ -186,6 +222,7 @@ public class SlingshotPlayer : MonoBehaviour
             }
 
             rb.linearVelocity = currentLaunchVelocity;
+
             transform.localScale = new Vector3(originalScale.x * 0.8f, originalScale.y * 1.25f, originalScale.z);
         }
     }
@@ -197,9 +234,11 @@ public class SlingshotPlayer : MonoBehaviour
         pullLine.positionCount = 2;
         
         Vector3 startPos = new Vector3(dragStartPos.x, dragStartPos.y, 0f);
+
         Vector3 pullEndPos = startPos - new Vector3(clampedPull.x*pullLineMulti, clampedPull.y*pullLineMulti, 0f);
 
         pullLine.SetPosition(0, startPos);
+
         pullLine.SetPosition(1, pullEndPos);
     }
 
@@ -208,7 +247,9 @@ public class SlingshotPlayer : MonoBehaviour
         if (trajectoryLine == null) return;
 
         Vector2 gravity = Physics2D.gravity * rb.gravityScale;
+
         trajectoryLine.positionCount = 1;
+
         trajectoryLine.SetPosition(0, startPos);
 
         float totalDistance = 0f;
@@ -224,7 +265,9 @@ public class SlingshotPlayer : MonoBehaviour
             if (totalDistance + segmentDist >= maxTrajectoryLength)
             {
                 float remaining = maxTrajectoryLength - totalDistance;
+
                 Vector2 dir = (pointPos - prevPos).normalized;
+
                 Vector2 clampedEndPos = prevPos + dir * remaining;
 
                 trajectoryLine.positionCount = i + 1;
@@ -256,7 +299,9 @@ public class SlingshotPlayer : MonoBehaviour
     void ApplySqueeze(float pullPercent)
     {
         float scaleX = originalScale.x * (1f + (pullPercent * maxSqueeze));
+
         float scaleY = originalScale.y * (1f - (pullPercent * maxSqueeze));
+
         transform.localScale = new Vector3(scaleX, scaleY, originalScale.z);
     }
 
