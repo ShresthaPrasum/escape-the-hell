@@ -44,7 +44,7 @@ public class menu : MonoBehaviour
         isPaused = true;
 
         pausePanel.SetActive(true);
-
+    
         slingshot.enabled = false;
 
         Time.timeScale = 0f;
@@ -60,6 +60,10 @@ public class menu : MonoBehaviour
         PlayerPrefs.SetInt("HasSaveData", 1);
 
         PlayerPrefs.Save();
+
+        PlayerRespawn respawn = playerTransform.GetComponent<PlayerRespawn>();
+
+        respawn.UpdateRespawnPosition(new Vector2(playerTransform.position.x, playerTransform.position.y));
     }    
 
     public void RestartGame()
@@ -88,6 +92,8 @@ public class menu : MonoBehaviour
         pausePanel.SetActive(false);
 
         slingshot.enabled = true;
+
+        Time.timeScale = 1f;
 
         Time.fixedDeltaTime = 0.02f;
     }

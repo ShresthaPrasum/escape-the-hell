@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class Checkpoint : MonoBehaviour
 {
+    public SpriteRenderer checkpointSprite;
+    public Color activeColor = Color.green;
     public bool isActivated = false; 
 
 
@@ -10,24 +13,36 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player") && !isActivated)
         {
             
-            PlayerRespawn playerRespawn = collision.GetComponent<PlayerRespawn>();
-            if (playerRespawn != null)
-            {
-                playerRespawn.UpdateRespawnPosition(transform.position);
-            }
-
-            
-            Checkpoint[] allCheckpoints = FindObjectsOfType<Checkpoint>();
-            foreach (Checkpoint cp in allCheckpoints)
-            {
-
-                if (cp != this && cp.isActivated == true)
-             {
-                    Destroy(cp.gameObject);
-                }
-            }
-            
-            isActivated = true;
+           AutoSave(collision.gameObject);
         }
+    }
+
+
+    private void AutoSave(GameObject player)
+    {
+
+        PlayerRespawn playerRespawn = player.GetComponent<PlayerRespawn>();
+
+        if (playerRespawn != null)
+        {
+            playerRespawn.UpdateRespawnPosition(transform.position);
+        }
+
+        isActivated = true;
+
+
+        PlayerPrefs.SetFloat("PlayerX",transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY",transform.position.y);
+
+        SlingshotPlayer slingshot = player.GetComponent<SlingshotPlayer>();
+
+        PlayerPrefs.SetInt("MaxAirJumps", slingshot.maxAirJumps);
+
+        PlayerPrefs.SetInt("HasSaveData", 1);
+        PlayerPrefs.Save();
+
+        checkpointSprite.color = activeColor;
+
+
     }
 }
