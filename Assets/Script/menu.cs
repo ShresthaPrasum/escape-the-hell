@@ -76,6 +76,7 @@ public class menu : MonoBehaviour
 
         PlayerPrefs.DeleteKey("MaxAirJumps");
 
+        PlayerPrefs.DeleteKey("DoubleJumpActivated");
         Time.timeScale =1f;
 
         Time.fixedDeltaTime = 0.02f;

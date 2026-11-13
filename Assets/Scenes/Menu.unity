@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8713ca392b64a94aae524e0018cc4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuUIController
-  gameSceneName: Level1
+  gameSceneName: Hell1
 --- !u!4 &1159646307
 Transform:
   m_ObjectHideFlags: 0

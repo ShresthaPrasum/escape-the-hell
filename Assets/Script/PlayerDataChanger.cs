@@ -20,6 +20,17 @@ public class PlayerDataChanger : MonoBehaviour
 
     void Start()
     {
+        if(PlayerPrefs.GetInt("DoubleJumpActivated", 0) == 1)
+        {
+            isActivated = true;
+
+            visualRoot.SetActive(false);
+           
+            gameObjectToDeactivate.SetActive(false);
+            
+            
+            slingshotPlayer.maxAirJumps = 1;
+        }
         
         ResetHoldProgress();
     }
@@ -34,7 +45,9 @@ public class PlayerDataChanger : MonoBehaviour
         if (distance <= interactDistance)
         {
             if (visualRoot != null && !visualRoot.activeSelf)
+            {   
                 visualRoot.SetActive(true);
+            }
 
             if (Input.GetKey(KeyCode.E))
             {
@@ -77,6 +90,10 @@ public class PlayerDataChanger : MonoBehaviour
 
     private void ActivateObject()
     {
+        PlayerPrefs.SetInt("DoubleJumpActivated", 1);
+
+        PlayerPrefs.Save();
+
         isActivated = true;
         ResetHoldProgress();
 
@@ -92,7 +109,7 @@ public class PlayerDataChanger : MonoBehaviour
 
         slingshotPlayer.maxAirJumps = 1;
         doubleJumpSignalVisual.SetActive(true);
-        Debug.Log("Activated!");
+
         onActivated?.Invoke();
     }
 

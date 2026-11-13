@@ -3596,7 +3596,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 11.706523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3606,7 +3606,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.21875, y: 4.84375}
+  m_Size: {x: 2.21875, y: 28.256796}
   m_EdgeRadius: 0
 --- !u!114 &283147478
 MonoBehaviour:
@@ -3620,6 +3620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb92e75bfb9097e4795250f81d4367e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
+  checkpointSprite: {fileID: 283147480}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
   isActivated: 0
 --- !u!95 &283147479
 Animator:
@@ -4273,7 +4275,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 402237452764789609, guid: 8ba9698e346e84a45b0f017a190eade4, type: 3}
-  m_Color: {r: 0.735849, g: 0.51258576, b: 0.36514768, a: 1}
+  m_Color: {r: 0.7433963, g: 0.39960167, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4326,7 +4328,7 @@ MonoBehaviour:
     rid: 2832907742325506264
   m_FalloffIntensity: 0.356
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 16.4
+  m_Intensity: 12.6
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 000000006f251d82i
@@ -8180,7 +8182,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1386, y: 456, z: -30}
+  m_LocalPosition: {x: 857.6, y: 301.7, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8204,7 +8206,7 @@ MonoBehaviour:
   IgnoreTimeScale: 0
   WorldUpOverride: {fileID: 0}
   ChannelMask: -1
-  UpdateMethod: 2
+  UpdateMethod: 0
   BlendUpdateMethod: 1
   LensModeOverride:
     Enabled: 0
@@ -8458,7 +8460,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 12.704388}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8468,7 +8470,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.21875, y: 4.84375}
+  m_Size: {x: 2.21875, y: 30.252525}
   m_EdgeRadius: 0
 --- !u!114 &519860399
 MonoBehaviour:
@@ -8482,6 +8484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb92e75bfb9097e4795250f81d4367e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
+  checkpointSprite: {fileID: 519860401}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
   isActivated: 0
 --- !u!95 &519860400
 Animator:
@@ -13373,8 +13377,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9960785, g: 0.9960785, b: 0.37647063, a: 0.21176471}
-        key1: {r: 1, g: 0.9792178, b: 0, a: 0.46666667}
+        key0: {r: 1, g: 0.5952096, b: 0, a: 0.21176471}
+        key1: {r: 1, g: 0.595092, b: 0, a: 0.46666667}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -13382,9 +13386,9 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 24132
+        ctime1: 39090
         ctime2: 58673
-        ctime3: 65535
+        ctime3: 58673
         ctime4: 0
         ctime5: 0
         ctime6: 0
@@ -15369,7 +15373,7 @@ Transform:
   m_GameObject: {fileID: 872962534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1386, y: 456, z: -30}
+  m_LocalPosition: {x: 857.6, y: 301.7, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23905,7 +23909,7 @@ Transform:
   m_GameObject: {fileID: 1275074563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1386, y: 456, z: -20}
+  m_LocalPosition: {x: 857.6, y: 301.7, z: -20}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -23939,7 +23943,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -28525,7 +28529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1667249933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30442,7 +30446,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.5488405, y: 7.600711}
+  m_Offset: {x: -3.1253595, y: 17.361362}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -30452,7 +30456,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.316431, y: 23.950125}
+  m_Size: {x: 6.775483, y: 43.471428}
   m_EdgeRadius: 0
 --- !u!114 &1788064860
 MonoBehaviour:
@@ -30466,6 +30470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb92e75bfb9097e4795250f81d4367e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
+  checkpointSprite: {fileID: 1788064857}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
   isActivated: 0
 --- !u!1 &1791250370
 GameObject:
@@ -31158,7 +31164,7 @@ PolygonCollider2D:
       - {x: 243.06026, y: 86.803604}
       - {x: 243.65752, y: 86.36946}
       - {x: 244.2385, y: 86.00546}
-      - {x: 244.81334, y: 85.72517}
+      - {x: 244.81332, y: 85.72517}
       - {x: 245.39409, y: 85.53975}
       - {x: 245.99713, y: 85.459274}
       - {x: 246.6551, y: 85.49804}
@@ -31190,45 +31196,46 @@ PolygonCollider2D:
       - {x: 263.9332, y: 98.70574}
       - {x: 264.66998, y: 98.97449}
       - {x: 265.35144, y: 99.097015}
-      - {x: 265.95197, y: 99.04017}
-      - {x: 266.59042, y: 98.7966}
-      - {x: 267.26764, y: 98.44624}
-      - {x: 268.00168, y: 98.00858}
-      - {x: 268.79236, y: 97.504875}
-      - {x: 269.63672, y: 96.956474}
-      - {x: 270.53076, y: 96.38505}
-      - {x: 271.46948, y: 95.81237}
-      - {x: 272.44763, y: 95.26043}
-      - {x: 273.45966, y: 94.75101}
-      - {x: 274.49948, y: 94.30586}
-      - {x: 275.56116, y: 93.94632}
-      - {x: 276.6388, y: 93.69329}
-      - {x: 277.727, y: 93.56696}
-      - {x: 278.82147, y: 93.58721}
-      - {x: 279.92307, y: 93.77506}
-      - {x: 281.2843, y: 94.207924}
-      - {x: 282.66122, y: 94.80216}
-      - {x: 284.04553, y: 95.52465}
-      - {x: 285.43082, y: 96.341675}
-      - {x: 286.81128, y: 97.21905}
-      - {x: 289.5366, y: 99.01766}
-      - {x: 290.87244, y: 99.87024}
-      - {x: 292.18533, y: 100.64588}
-      - {x: 293.47275, y: 101.31008}
-      - {x: 294.73315, y: 101.82746}
-      - {x: 295.9659, y: 102.160614}
-      - {x: 297.16922, y: 102.268295}
-      - {x: 298.33438, y: 102.10612}
-      - {x: 299.4265, y: 101.64268}
+      - {x: 265.94965, y: 99.040695}
+      - {x: 266.57657, y: 98.81143}
+      - {x: 267.2307, y: 98.49686}
+      - {x: 267.9324, y: 98.11227}
+      - {x: 268.6823, y: 97.67605}
+      - {x: 269.4789, y: 97.206436}
+      - {x: 270.3202, y: 96.72187}
+      - {x: 271.20303, y: 96.24081}
+      - {x: 272.12433, y: 95.7818}
+      - {x: 273.08054, y: 95.363304}
+      - {x: 274.068, y: 95.003586}
+      - {x: 275.083, y: 94.72064}
+      - {x: 276.12225, y: 94.53217}
+      - {x: 277.1829, y: 94.455574}
+      - {x: 278.26285, y: 94.5082}
+      - {x: 279.36392, y: 94.70859}
+      - {x: 280.7381, y: 95.13162}
+      - {x: 282.13925, y: 95.69484}
+      - {x: 283.55768, y: 96.36794}
+      - {x: 284.98517, y: 97.12026}
+      - {x: 286.41418, y: 97.92087}
+      - {x: 287.8377, y: 98.73877}
+      - {x: 289.2488, y: 99.54285}
+      - {x: 290.64145, y: 100.30208}
+      - {x: 292.0099, y: 100.98531}
+      - {x: 293.34927, y: 101.56116}
+      - {x: 294.65564, y: 101.99748}
+      - {x: 295.92557, y: 102.2604}
+      - {x: 297.15454, y: 102.31314}
+      - {x: 298.33286, y: 102.1164}
+      - {x: 299.4276, y: 101.6421}
       - {x: 300.03043, y: 101.26194}
-      - {x: 300.78958, y: 100.7602}
+      - {x: 300.9279, y: 100.66976}
       - {x: 301.7185, y: 100.15262}
       - {x: 302.81485, y: 99.463264}
       - {x: 304.07498, y: 98.71714}
       - {x: 305.4948, y: 97.939545}
       - {x: 307.06982, y: 97.1558}
       - {x: 308.79572, y: 96.39144}
-      - {x: 310.66788, y: 95.67184}
+      - {x: 310.6679, y: 95.67184}
       - {x: 312.68195, y: 95.02245}
       - {x: 314.83337, y: 94.46865}
       - {x: 317.11786, y: 94.03585}
@@ -31244,11 +31251,11 @@ PolygonCollider2D:
       - {x: 325.9835, y: 130.36044}
       - {x: 325.92093, y: 138.53494}
       - {x: 325.82513, y: 146.56186}
-      - {x: 325.70883, y: 154.15065}
+      - {x: 325.70883, y: 154.15067}
       - {x: 325.58493, y: 161.0109}
       - {x: 325.46622, y: 166.85208}
       - {x: 325.36554, y: 171.3838}
-      - {x: 325.26953, y: 175.36595}
+      - {x: 325.26962, y: 175.35745}
       - {x: 325.512, y: 175.69055}
       - {x: 409.1245, y: 200.43405}
       - {x: 415.93988, y: 204.23863}
@@ -31626,9 +31633,9 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 280.00293, y: 93.4461, z: 0.000000024013616}
-      leftTangent: {x: -5.758484, y: -1.4531097, z: 0}
-      rightTangent: {x: 6.9811707, y: 1.7635956, z: 0}
+    - position: {x: 279.44412, y: 94.3797, z: 0.000000024013616}
+      leftTangent: {x: -5.758545, y: -1.4531021, z: 0}
+      rightTangent: {x: 6.9811096, y: 1.7635956, z: 0}
       mode: 1
       height: 1
       spriteIndex: 0
@@ -32080,7 +32087,7 @@ MonoBehaviour:
   - {x: 243.06026, y: 86.803604}
   - {x: 243.65752, y: 86.36946}
   - {x: 244.2385, y: 86.00546}
-  - {x: 244.81334, y: 85.72517}
+  - {x: 244.81332, y: 85.72517}
   - {x: 245.39409, y: 85.53975}
   - {x: 245.99713, y: 85.459274}
   - {x: 246.6551, y: 85.49804}
@@ -32112,45 +32119,46 @@ MonoBehaviour:
   - {x: 263.9332, y: 98.70574}
   - {x: 264.66998, y: 98.97449}
   - {x: 265.35144, y: 99.097015}
-  - {x: 265.95197, y: 99.04017}
-  - {x: 266.59042, y: 98.7966}
-  - {x: 267.26764, y: 98.44624}
-  - {x: 268.00168, y: 98.00858}
-  - {x: 268.79236, y: 97.504875}
-  - {x: 269.63672, y: 96.956474}
-  - {x: 270.53076, y: 96.38505}
-  - {x: 271.46948, y: 95.81237}
-  - {x: 272.44763, y: 95.26043}
-  - {x: 273.45966, y: 94.75101}
-  - {x: 274.49948, y: 94.30586}
-  - {x: 275.56116, y: 93.94632}
-  - {x: 276.6388, y: 93.69329}
-  - {x: 277.727, y: 93.56696}
-  - {x: 278.82147, y: 93.58721}
-  - {x: 279.92307, y: 93.77506}
-  - {x: 281.2843, y: 94.207924}
-  - {x: 282.66122, y: 94.80216}
-  - {x: 284.04553, y: 95.52465}
-  - {x: 285.43082, y: 96.341675}
-  - {x: 286.81128, y: 97.21905}
-  - {x: 289.5366, y: 99.01766}
-  - {x: 290.87244, y: 99.87024}
-  - {x: 292.18533, y: 100.64588}
-  - {x: 293.47275, y: 101.31008}
-  - {x: 294.73315, y: 101.82746}
-  - {x: 295.9659, y: 102.160614}
-  - {x: 297.16922, y: 102.268295}
-  - {x: 298.33438, y: 102.10612}
-  - {x: 299.4265, y: 101.64268}
+  - {x: 265.94965, y: 99.040695}
+  - {x: 266.57657, y: 98.81143}
+  - {x: 267.2307, y: 98.49686}
+  - {x: 267.9324, y: 98.11227}
+  - {x: 268.6823, y: 97.67605}
+  - {x: 269.4789, y: 97.206436}
+  - {x: 270.3202, y: 96.72187}
+  - {x: 271.20303, y: 96.24081}
+  - {x: 272.12433, y: 95.7818}
+  - {x: 273.08054, y: 95.363304}
+  - {x: 274.068, y: 95.003586}
+  - {x: 275.083, y: 94.72064}
+  - {x: 276.12225, y: 94.53217}
+  - {x: 277.1829, y: 94.455574}
+  - {x: 278.26285, y: 94.5082}
+  - {x: 279.36392, y: 94.70859}
+  - {x: 280.7381, y: 95.13162}
+  - {x: 282.13925, y: 95.69484}
+  - {x: 283.55768, y: 96.36794}
+  - {x: 284.98517, y: 97.12026}
+  - {x: 286.41418, y: 97.92087}
+  - {x: 287.8377, y: 98.73877}
+  - {x: 289.2488, y: 99.54285}
+  - {x: 290.64145, y: 100.30208}
+  - {x: 292.0099, y: 100.98531}
+  - {x: 293.34927, y: 101.56116}
+  - {x: 294.65564, y: 101.99748}
+  - {x: 295.92557, y: 102.2604}
+  - {x: 297.15454, y: 102.31314}
+  - {x: 298.33286, y: 102.1164}
+  - {x: 299.4276, y: 101.6421}
   - {x: 300.03043, y: 101.26194}
-  - {x: 300.78958, y: 100.7602}
+  - {x: 300.9279, y: 100.66976}
   - {x: 301.7185, y: 100.15262}
   - {x: 302.81485, y: 99.463264}
   - {x: 304.07498, y: 98.71714}
   - {x: 305.4948, y: 97.939545}
   - {x: 307.06982, y: 97.1558}
   - {x: 308.79572, y: 96.39144}
-  - {x: 310.66788, y: 95.67184}
+  - {x: 310.6679, y: 95.67184}
   - {x: 312.68195, y: 95.02245}
   - {x: 314.83337, y: 94.46865}
   - {x: 317.11786, y: 94.03585}
@@ -32166,11 +32174,11 @@ MonoBehaviour:
   - {x: 325.9835, y: 130.36044}
   - {x: 325.92093, y: 138.53494}
   - {x: 325.82513, y: 146.56186}
-  - {x: 325.70883, y: 154.15065}
+  - {x: 325.70883, y: 154.15067}
   - {x: 325.58493, y: 161.0109}
   - {x: 325.46622, y: 166.85208}
   - {x: 325.36554, y: 171.3838}
-  - {x: 325.26953, y: 175.36595}
+  - {x: 325.26962, y: 175.35745}
   - {x: 325.512, y: 175.69055}
   - {x: 409.1245, y: 200.43405}
   - {x: 415.93988, y: 204.23863}
@@ -35658,7 +35666,7 @@ Transform:
   m_GameObject: {fileID: 2018845647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 734.7, y: 314, z: 0}
+  m_LocalPosition: {x: 734.82, y: 311.17, z: 0}
   m_LocalScale: {x: 1.4578209, y: 1.4622201, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35698,7 +35706,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 10.650119}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -35708,7 +35716,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.21875, y: 4.84375}
+  m_Size: {x: 2.21875, y: 26.143988}
   m_EdgeRadius: 0
 --- !u!114 &2018845650
 MonoBehaviour:
@@ -35722,6 +35730,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb92e75bfb9097e4795250f81d4367e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
+  checkpointSprite: {fileID: 2018845652}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
   isActivated: 0
 --- !u!95 &2018845651
 Animator:
@@ -40642,7 +40652,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 11.5538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -40652,7 +40662,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.21875, y: 4.84375}
+  m_Size: {x: 2.21875, y: 27.95135}
   m_EdgeRadius: 0
 --- !u!114 &2119343801
 MonoBehaviour:
@@ -40666,6 +40676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb92e75bfb9097e4795250f81d4367e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
+  checkpointSprite: {fileID: 2119343803}
+  activeColor: {r: 0, g: 1, b: 0, a: 1}
   isActivated: 0
 --- !u!95 &2119343802
 Animator:
