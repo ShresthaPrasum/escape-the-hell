@@ -20,17 +20,11 @@ public class portalPillar : MonoBehaviour
     private bool isActivated = false;
     public Animator animator;
 
-    public GameObject talkPortal;
-
-    public GameObject playerObject;
-
     public GameObject gameObjectToActivate;
 
     public string NextSceneName;
 
     public float timeToLoad = 1f;
-
-    public GameObject portal;
 
 
     void Start()
@@ -87,6 +81,8 @@ public class portalPillar : MonoBehaviour
 
     private void ResetHoldProgress()
     {
+
+        gameObjectToActivate.SetActive(false);
         currentHoldTimer = 0f;
 
         if(fillImage != null)
@@ -94,7 +90,6 @@ public class portalPillar : MonoBehaviour
             fillImage.fillAmount = 0f;
         }
     }
-
 
     private void ActivateObject()
     {
@@ -106,24 +101,9 @@ public class portalPillar : MonoBehaviour
 
         gameObjectToActivate.SetActive(true);
 
-        animator.SetTrigger("OpenPortal");
+        animator.SetBool("isActivated", true);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            animator.SetTrigger("OnCollision");
-            playerObject.SetActive(false);
-            
-            Invoke("LoadNextScene", timeToLoad);
-        }
-    }
-
-    private void LoadNextScene()
-    {
-        SceneManager.LoadScene(NextSceneName);
-    }
 
     private void OnDrawGizmosSelected()
     {

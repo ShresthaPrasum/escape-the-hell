@@ -58,10 +58,13 @@ Material:
     - _Float: 145.54
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _fogSize: 76.2
+    - _fogSize: 144.2
+    - _fogSize2: 1
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _fogColor: {r: 1.6245048, g: 0, b: 0, a: 0.8745098}
-    - _fogSpeed: {r: -0.02, g: 0, b: 0, a: 0}
+    - _fogColor: {r: 0, g: 0, b: 0, a: 0}
+    - _fogColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _fogSpeed: {r: 0.04, g: 0, b: 0, a: 0}
+    - _fogSpeed2: {r: 5.58, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
