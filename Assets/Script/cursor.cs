@@ -2,13 +2,10 @@ using UnityEngine;
 
 public class AnimatedCursor : MonoBehaviour
 {
-    void Start()
-    {
-        Cursor.visible = false;
-    }
-
     void Update()
     {
+        Cursor.visible = false;
+        
         transform.position = Input.mousePosition;
     }
 }

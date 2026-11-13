@@ -63,7 +63,7 @@ Material:
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _fogColor: {r: 0, g: 0, b: 0, a: 0}
-    - _fogColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _fogColor2: {r: 0.82641506, g: 0.2229761, b: 0.2229761, a: 0}
     - _fogSpeed: {r: 0.04, g: 0, b: 0, a: 0}
     - _fogSpeed2: {r: 0.04, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
