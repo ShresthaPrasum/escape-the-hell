@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -20,6 +19,9 @@ public class Checkpoint : MonoBehaviour
 
     private void AutoSave(GameObject player)
     {
+        isActivated = true;
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
 
         PlayerRespawn playerRespawn = player.GetComponent<PlayerRespawn>();
 
@@ -28,21 +30,32 @@ public class Checkpoint : MonoBehaviour
             playerRespawn.UpdateRespawnPosition(transform.position);
         }
 
-        isActivated = true;
 
-
-        PlayerPrefs.SetFloat("PlayerX",transform.position.x);
-        PlayerPrefs.SetFloat("PlayerY",transform.position.y);
+        PlayerPrefs.SetFloat("PlayerX_" +sceneName ,transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY_" +sceneName ,transform.position.y);
 
         SlingshotPlayer slingshot = player.GetComponent<SlingshotPlayer>();
 
-        PlayerPrefs.SetInt("MaxAirJumps", slingshot.maxAirJumps);
+        PlayerPrefs.SetInt("MaxAirJumps_"+sceneName, slingshot.maxAirJumps);
 
-        PlayerPrefs.SetInt("HasSaveData", 1);
+        PlayerPrefs.SetInt("HasSaveData_"+ sceneName, 1);
+        PlayerPrefs.SetString("LastSavedScene", sceneName);
         PlayerPrefs.Save();
 
         checkpointSprite.color = activeColor;
 
+        PurgeOldCheckpoints();
+    }
 
+    private void PurgeOldCheckpoints()
+    {
+        Checkpoint[] allCheckpoints = FindObjectsByType<Checkpoint>();
+        foreach (Checkpoint cp in allCheckpoints)
+        {
+            if (cp != this && cp.isActivated)
+            {
+                Destroy(cp.gameObject);
+            }
+        }
     }
 }

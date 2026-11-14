@@ -26,10 +26,14 @@ public class portalPillar : MonoBehaviour
 
     public float timeToLoad = 1f;
 
+    private string sceneName;
+
 
     void Start()
     {
         ResetHoldProgress();
+
+        sceneName =  SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -102,6 +106,14 @@ public class portalPillar : MonoBehaviour
         gameObjectToActivate.SetActive(true);
 
         animator.SetBool("isActivated", true);
+
+        PlayerPrefs.SetFloat("PlayerX_" + sceneName, player.position.x);
+
+        PlayerPrefs.SetFloat("PlayerY_" + sceneName, player.position.y);
+
+        PlayerPrefs.SetInt("HasSaveData_" + sceneName, 1);
+
+        PlayerPrefs.Save();
     }
 
 

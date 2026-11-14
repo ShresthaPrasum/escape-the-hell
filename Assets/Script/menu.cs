@@ -14,8 +14,12 @@ public class menu : MonoBehaviour
 
     private bool isPaused = false;
 
+    private string sceneName;
+
     void Start()
     {
+        sceneName = SceneManager.GetActiveScene().name;
+
         if(pausePanel != null)
         {
             pausePanel.SetActive(false);
@@ -52,12 +56,14 @@ public class menu : MonoBehaviour
 
     public void SaveGame()
     {
-        PlayerPrefs.SetFloat("PlayerX", playerTransform.position.x);
-        PlayerPrefs.SetFloat("PlayerY", playerTransform.position.y);
+        PlayerPrefs.SetFloat("PlayerX_"+ sceneName, playerTransform.position.x);
+        PlayerPrefs.SetFloat("PlayerY_"+ sceneName, playerTransform.position.y);
 
-        PlayerPrefs.SetInt("MaxAirJumps", slingshot.maxAirJumps);
+        PlayerPrefs.SetInt("MaxAirJumps_" + sceneName, slingshot.maxAirJumps);
 
-        PlayerPrefs.SetInt("HasSaveData", 1);
+        PlayerPrefs.SetInt("HasSaveData_" + sceneName, 1);
+
+        PlayerPrefs.SetString("LastSavedScene", sceneName);
 
         PlayerPrefs.Save();
 
@@ -68,15 +74,15 @@ public class menu : MonoBehaviour
 
     public void RestartGame()
     {
-        PlayerPrefs.DeleteKey("HasSaveData");
+        PlayerPrefs.DeleteKey("HasSaveData_"+ sceneName);
 
-        PlayerPrefs.DeleteKey("PlayerX");
+        PlayerPrefs.DeleteKey("PlayerX_"+ sceneName);
 
-        PlayerPrefs.DeleteKey("PlayerY");
+        PlayerPrefs.DeleteKey("PlayerY_"+ sceneName );
 
-        PlayerPrefs.DeleteKey("MaxAirJumps");
+        PlayerPrefs.DeleteKey("MaxAirJumps_" + sceneName );
 
-        PlayerPrefs.DeleteKey("DoubleJumpActivated");
+        PlayerPrefs.DeleteKey("DoubleJumpActivated_"+ sceneName);
         Time.timeScale =1f;
 
         Time.fixedDeltaTime = 0.02f;
@@ -110,11 +116,11 @@ public class menu : MonoBehaviour
 
     private void LoadSavedGame()
     {
-        if(PlayerPrefs.GetInt("HasSaveData", 0)==1 && playerTransform != null)
+        if(PlayerPrefs.GetInt("HasSaveData_"+ sceneName, 0)==1)
         {
-            float x = PlayerPrefs.GetFloat("PlayerX");
+            float x = PlayerPrefs.GetFloat("PlayerX_"+ sceneName);
 
-            float y = PlayerPrefs.GetFloat("PlayerY");
+            float y = PlayerPrefs.GetFloat("PlayerY_"+ sceneName);
 
             playerTransform.position = new Vector2(x, y);
 
@@ -123,7 +129,7 @@ public class menu : MonoBehaviour
 
             respawn.UpdateRespawnPosition(new Vector2(x, y));
 
-            slingshot.maxAirJumps = PlayerPrefs.GetInt("MaxAirJumps", slingshot.maxAirJumps);
+            slingshot.maxAirJumps = PlayerPrefs.GetInt("MaxAirJumps_" + sceneName, slingshot.maxAirJumps);
         }
     }
 }
