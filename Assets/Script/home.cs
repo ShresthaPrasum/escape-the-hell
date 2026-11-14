@@ -3,7 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public string gameSceneName = "Level1"; 
+    public string gameSceneName = "Hell1"; 
+
+    void Start()
+    {
+        gameSceneName = PlayerPrefs.GetString("LastSavedScene", gameSceneName);
+    }
     public void StartGame()
     {
         Time.timeScale = 1f; 

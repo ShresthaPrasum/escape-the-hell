@@ -25,6 +25,11 @@ public class menu : MonoBehaviour
             pausePanel.SetActive(false);
         }
 
+        if(PlayerPrefs.GetInt("HasSaveData_"+ sceneName)!=1)
+        {
+            SaveGame();
+        }
+
         LoadSavedGame();
     }
 
