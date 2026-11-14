@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: b79857ae64edb974ba98bef46896428b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1998163474509035808
+    second: Melted animation_0
+  - first:
+      213: -967840048451951126
+    second: Melted animation_1
+  - first:
+      213: -7239396395684627943
+    second: Melted animation_2
+  - first:
+      213: -6428543419589977711
+    second: Melted animation_3
+  - first:
+      213: -7242941060556866159
+    second: Melted animation_4
+  - first:
+      213: -2654865307215998757
+    second: Melted animation_5
+  - first:
+      213: -7101455052035689426
+    second: Melted animation_6
+  - first:
+      213: -649889238844692738
+    second: Melted animation_7
+  - first:
+      213: -4705761414068666768
+    second: Melted animation_8
+  - first:
+      213: -1188134129890195600
+    second: Melted animation_9
+  - first:
+      213: -512285613791441805
+    second: Melted animation_10
+  - first:
+      213: -1972610230290435242
+    second: Melted animation_11
+  - first:
+      213: 6613499876554589087
+    second: Melted animation_12
+  - first:
+      213: 7968467715857369372
+    second: Melted animation_13
+  - first:
+      213: -4205684618718114845
+    second: Melted animation_14
+  - first:
+      213: -4824055921310298454
+    second: Melted animation_15
+  - first:
+      213: -9049261865954867502
+    second: Melted animation_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Melted animation_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1535
+        width: 79
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0297545e717eabb10800000000000000
+      internalID: 1998163474509035808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1439
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5ef909a9a8192f0800000000000000
+      internalID: -967840048451951126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1343
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a79f6855f788b90800000000000000
+      internalID: -7239396395684627943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1247
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1991a2cd1d939c6a0800000000000000
+      internalID: -6428543419589977711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1151
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dba6cea77eb7b90800000000000000
+      internalID: -7242941060556866159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1055
+        width: 78
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0d1e4b116082bd0800000000000000
+      internalID: -2654865307215998757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 959
+        width: 78
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24720b5140927d90800000000000000
+      internalID: -7101455052035689426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 863
+        width: 78
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef620573e212bf6f0800000000000000
+      internalID: -649889238844692738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 767
+        width: 79
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e72b41de6c1beb0800000000000000
+      internalID: -4705761414068666768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_9
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 671
+        width: 79
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077806acd46e28fe0800000000000000
+      internalID: -1188134129890195600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 575
+        width: 79
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c0b6ec2fef3e8f0800000000000000
+      internalID: -512285613791441805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_11
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 479
+        width: 78
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653bc376271ef94e0800000000000000
+      internalID: -1972610230290435242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 383
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f934020191fd7cb50800000000000000
+      internalID: 6613499876554589087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_13
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 287
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19c8d73b2fa59e60800000000000000
+      internalID: 7968467715857369372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_14
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 191
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb8bf73f1862a5c0800000000000000
+      internalID: -4205684618718114845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 95
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae0ea1d2b28d0db0800000000000000
+      internalID: -4824055921310298454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Melted animation_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 78
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6854827409a6280800000000000000
+      internalID: -9049261865954867502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Melted animation_0: 1998163474509035808
+      Melted animation_1: -967840048451951126
+      Melted animation_10: -512285613791441805
+      Melted animation_11: -1972610230290435242
+      Melted animation_12: 6613499876554589087
+      Melted animation_13: 7968467715857369372
+      Melted animation_14: -4205684618718114845
+      Melted animation_15: -4824055921310298454
+      Melted animation_16: -9049261865954867502
+      Melted animation_2: -7239396395684627943
+      Melted animation_3: -6428543419589977711
+      Melted animation_4: -7242941060556866159
+      Melted animation_5: -2654865307215998757
+      Melted animation_6: -7101455052035689426
+      Melted animation_7: -649889238844692738
+      Melted animation_8: -4705761414068666768
+      Melted animation_9: -1188134129890195600
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,13 +14,17 @@ public class getExplosionAbility : MonoBehaviour
 
     public GameObject gameObjectToDeactivate;
 
-    public getExplosionAbility getExplosionAbilityScript;
+    public explosionEffector explosionAbility;
+
+    public getExplosionAbility getExplosionAbilityy;
 
     public float interactDistance = 2.5f;
 
     public float requiredHoldTime = 2.0f;
 
     private float currentHoldTimer = 0f;
+
+    public float waitTimeBeforeDeactivation = 1.0f;
 
     private bool isActivated = false;
 
@@ -34,12 +38,15 @@ public class getExplosionAbility : MonoBehaviour
 
             gameObjectToDeactivate.SetActive(false);
 
-            getExplosionAbilityScript.enabled = true;
+            getExplosionAbilityy.enabled = false;
+
+            explosionAbility.enabled = true;
         }
 
         ResetHoldProgress();
 
-        getExplosionAbilityScript.enabled = false;
+        
+        explosionAbilitySignalVisual.SetActive(false);
     }
 
     void Update()
@@ -112,11 +119,15 @@ public class getExplosionAbility : MonoBehaviour
 
         visualRoot.SetActive(false);
 
-        gameObjectToDeactivate.SetActive(false);
-
         explosionAbilitySignalVisual.SetActive(true);
 
-        getExplosionAbilityScript.enabled = true;
+        explosionAbility.enabled = true;
+    }
+
+
+    public void deactivate()
+    {
+        gameObjectToDeactivate.SetActive(false);
     }
 
     private void OnDrawGizmosSelected()

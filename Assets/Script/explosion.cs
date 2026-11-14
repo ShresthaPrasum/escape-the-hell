@@ -9,6 +9,8 @@ public class explosionEffector : MonoBehaviour
 
     public GameObject explosionParticlePrefab;
 
+    public ParticleSystem explosionParticleSystem;
+
 
     void Update()
     {
@@ -30,7 +32,8 @@ public class explosionEffector : MonoBehaviour
                 {
                     Instantiate(explosionParticlePrefab, col.transform.position, Quaternion.identity);
                 }
-
+                explosionParticleSystem.Play();
+                
                 Destroy(col.gameObject);
 
             }
