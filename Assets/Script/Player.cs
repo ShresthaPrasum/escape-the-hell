@@ -105,10 +105,10 @@ public class SlingshotPlayer : MonoBehaviour
 
         if(smokeTrail != null)
         {
-            bool isFlying = !isGrounded && rb.linearVelocity.magnitude > PlayerSpeedToEmitSmoke;
+            bool isMoving = rb.linearVelocity.magnitude > PlayerSpeedToEmitSmoke;
 
             var emission = smokeTrail.emission;
-            emission.enabled = isFlying;
+            emission.enabled = isMoving;
         }
 
         if (Input.GetMouseButtonDown(0) && (isGrounded || airJumpsLeft > 0))
