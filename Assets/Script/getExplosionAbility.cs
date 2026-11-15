@@ -38,9 +38,10 @@ public class getExplosionAbility : MonoBehaviour
 
             gameObjectToDeactivate.SetActive(false);
 
+            explosionAbility.enabled = true;
+
             getExplosionAbilityy.enabled = false;
 
-            explosionAbility.enabled = true;
         }
 
         ResetHoldProgress();
@@ -48,6 +49,8 @@ public class getExplosionAbility : MonoBehaviour
         
         explosionAbilitySignalVisual.SetActive(false);
     }
+
+    
 
     void Update()
     {
@@ -115,6 +118,7 @@ public class getExplosionAbility : MonoBehaviour
         PlayerPrefs.Save();
 
         isActivated =true;
+        
         ResetHoldProgress();
 
         visualRoot.SetActive(false);

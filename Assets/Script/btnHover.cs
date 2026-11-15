@@ -12,8 +12,11 @@ public class ButtonHoverIndicator : MonoBehaviour,  IPointerEnterHandler, IPoint
 
     void OnEnable()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        
+        if(audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
         if(glowIndicator != null)
         {
             glowIndicator.SetActive(false);
