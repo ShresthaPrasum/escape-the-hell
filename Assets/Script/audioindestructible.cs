@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class audioindestructible : MonoBehaviour
 {
-    private static audioindestructible instance;
+    public static audioindestructible instance;
+
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -14,6 +16,17 @@ public class audioindestructible : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            audioSource = GetComponent<AudioSource>();
+
+        }
+
+    }
+
+    public void PlayUISound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 }

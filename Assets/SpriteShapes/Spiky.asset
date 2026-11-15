@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7181f404f1447c0a7a17b3070b952b, type: 3}
-  m_Name: RockyIce
+  m_Name: Spiky
   m_EditorClassIdentifier: 
   m_Angles:
   - m_Start: -180
     m_End: 180
     m_Order: -47
     m_Sprites:
-    - {fileID: 734536432, guid: 4eb0d00c12f0580439b40b36f94ff444, type: 3}
+    - {fileID: 21300000, guid: 468eb4bb60d3ea14388a8c3a63f80949, type: 3}
     - {fileID: 834716362, guid: cabbf601d329cf349bf896dd3e32085d, type: 3}
     - {fileID: 21300000, guid: 2ce80840c509eb54fb989f5fd9392c26, type: 2}
     - {fileID: -1274016137, guid: 04077c717e7d59d449a5abae4131fe7a, type: 3}
@@ -28,10 +28,10 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - m_CornerType: 1
     m_Sprites:
-    - {fileID: 21300000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+    - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - m_CornerType: 2
     m_Sprites:
-    - {fileID: 21300000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+    - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - m_CornerType: 3
     m_Sprites:
     - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}

@@ -16,17 +16,29 @@ public class explosionEffector : MonoBehaviour
     public AudioClip explosionAudioClip;
 
 
-    void Update()
+    [Header("Cooldown")]
+    public float cooldownTime = 2f;
+
+    private float nextExplosionTime = 0f;
+
+    void Start()
     {
-        if(explosionAudioSource == null)
+        if (explosionAudioSource == null)
         {
             explosionAudioSource = gameObject.AddComponent<AudioSource>();
         }
-        if (Input.GetKeyDown(explodeKey))
+    }
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(explodeKey) && Time.time >= nextExplosionTime)
         {
             TriggerExplosion();
             explosionParticleSystem.Play();
             // explosionParticleSystem.Stop(true);
+
+            nextExplosionTime = Time.time + cooldownTime;
         }
     }
 
