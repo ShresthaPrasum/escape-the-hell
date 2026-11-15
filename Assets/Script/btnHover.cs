@@ -6,12 +6,14 @@ public class ButtonHoverIndicator : MonoBehaviour,  IPointerEnterHandler, IPoint
 {
     public GameObject glowIndicator;
 
-    public AudioSource audioSource;
-
     public AudioClip hoverAudioClip;
+
+    public AudioSource audioSource;
 
     void OnEnable()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        
         if(glowIndicator != null)
         {
             glowIndicator.SetActive(false);
@@ -21,6 +23,7 @@ public class ButtonHoverIndicator : MonoBehaviour,  IPointerEnterHandler, IPoint
     public void OnPointerEnter(PointerEventData eventData)
     {
         glowIndicator.SetActive(true);
+        audioSource.PlayOneShot(hoverAudioClip);
     }
 
     public void OnPointerExit(PointerEventData eventData)
