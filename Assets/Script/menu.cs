@@ -12,12 +12,23 @@ public class menu : MonoBehaviour
 
     public string mainMenuSceneName ="Menu";
 
+    public AudioSource audioSource;
+
+    public AudioClip clickAudioClip;
+
+    public AudioClip saveAudioClip;
+
     private bool isPaused = false;
 
     private string sceneName;
 
     void Start()
     {
+
+        if(audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
         sceneName = SceneManager.GetActiveScene().name;
 
         if(pausePanel != null)
@@ -59,8 +70,15 @@ public class menu : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void PlaySaveAudio()
+    {
+        audioSource.PlayOneShot(saveAudioClip);
+    }
+    
     public void SaveGame()
     {
+        
+
         PlayerPrefs.SetFloat("PlayerX_"+ sceneName, playerTransform.position.x);
         PlayerPrefs.SetFloat("PlayerY_"+ sceneName, playerTransform.position.y);
 
@@ -79,6 +97,8 @@ public class menu : MonoBehaviour
 
     public void RestartGame()
     {
+        audioSource.PlayOneShot(clickAudioClip);
+
         PlayerPrefs.DeleteKey("HasSaveData_"+ sceneName);
 
         PlayerPrefs.DeleteKey("PlayerX_"+ sceneName);
@@ -99,6 +119,8 @@ public class menu : MonoBehaviour
 
     public void ResumeGame()
     {
+        audioSource.PlayOneShot(clickAudioClip);
+
         isPaused = false;
 
         pausePanel.SetActive(false);
@@ -112,6 +134,8 @@ public class menu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        audioSource.PlayOneShot(clickAudioClip);
+        
         Time.timeScale = 1f;
 
         Time.fixedDeltaTime = 0.02f;

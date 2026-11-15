@@ -11,9 +11,17 @@ public class explosionEffector : MonoBehaviour
 
     public ParticleSystem explosionParticleSystem;
 
+    public AudioSource explosionAudioSource;
+
+    public AudioClip explosionAudioClip;
+
 
     void Update()
     {
+        if(explosionAudioSource == null)
+        {
+            explosionAudioSource = gameObject.AddComponent<AudioSource>();
+        }
         if (Input.GetKeyDown(explodeKey))
         {
             TriggerExplosion();
@@ -25,6 +33,8 @@ public class explosionEffector : MonoBehaviour
     private void TriggerExplosion()
     {
         Collider2D[] collidersInRange = Physics2D.OverlapCircleAll(transform.position, explosionRadius );
+
+        explosionAudioSource.PlayOneShot(explosionAudioClip);
     
         foreach(Collider2D col in collidersInRange)
         {

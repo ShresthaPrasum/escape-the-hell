@@ -6,6 +6,10 @@ public class ButtonHoverIndicator : MonoBehaviour,  IPointerEnterHandler, IPoint
 {
     public GameObject glowIndicator;
 
+    public AudioSource audioSource;
+
+    public AudioClip hoverAudioClip;
+
     void OnEnable()
     {
         if(glowIndicator != null)

@@ -12,6 +12,8 @@ public class SlingshotPlayer : MonoBehaviour
     public LayerMask groundlayer;
     public float stopSpeed = 10f;
 
+    public AudioClip jumpAudioClip;
+
 
     [Header("Aim Assist")]
     public LineRenderer pullLine;
@@ -30,6 +32,8 @@ public class SlingshotPlayer : MonoBehaviour
 
     public float PlayerSpeedToEmitSmoke = 1.5f;
 
+    public AudioSource audioSource;
+
 
     [Header("Private variables")]
     private Rigidbody2D rb;
@@ -44,6 +48,7 @@ public class SlingshotPlayer : MonoBehaviour
 
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
 
         if (anim == null){
@@ -220,6 +225,8 @@ public class SlingshotPlayer : MonoBehaviour
             {
                 airJumpsLeft--;
             }
+
+            audioSource.PlayOneShot(jumpAudioClip);
 
             rb.linearVelocity = currentLaunchVelocity;
 
