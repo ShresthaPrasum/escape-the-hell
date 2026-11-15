@@ -17,6 +17,8 @@ public class explosionEffector : MonoBehaviour
         if (Input.GetKeyDown(explodeKey))
         {
             TriggerExplosion();
+            explosionParticleSystem.Play();
+            // explosionParticleSystem.Stop(true);
         }
     }
 
@@ -28,11 +30,13 @@ public class explosionEffector : MonoBehaviour
         {
             if (col.CompareTag("Explodable"))
             {
+                
+                
                 if(explosionParticlePrefab != null)
                 {
                     Instantiate(explosionParticlePrefab, col.transform.position, Quaternion.identity);
                 }
-                explosionParticleSystem.Play();
+                
                 
                 Destroy(col.gameObject);
 
