@@ -62,12 +62,12 @@ public class explosionEffector : MonoBehaviour
                 
                 if(col.CompareTag("ExplodableRoot") && rockExplosionParticlePrefab != null)
                 {
-                    Instantiate(rockExplosionParticlePrefab, col.transform.position, Quaternion.identity);
+                    Instantiate(rootExplosionParticlePrefab, col.transform.position, Quaternion.identity);
                 }
 
                 else if(col.CompareTag("ExplodableRock") && rootExplosionParticlePrefab != null)
                 {
-                    Instantiate(rootExplosionParticlePrefab, col.transform.position, Quaternion.identity);
+                    Instantiate(rockExplosionParticlePrefab, col.transform.position, Quaternion.identity);
                 }
                 
                 Destroy(col.gameObject);
