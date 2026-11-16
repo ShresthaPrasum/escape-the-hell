@@ -16,15 +16,13 @@ public class PlayerDataChanger : MonoBehaviour
     public UnityEvent onActivated;
 
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
-    public AudioClip audioClip;
     private float currentHoldTimer = 0f;
     private bool isActivated = false;
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
 
         if(PlayerPrefs.GetInt("DoubleJumpActivated", 0) == 1)
         {
@@ -116,8 +114,8 @@ public class PlayerDataChanger : MonoBehaviour
         slingshotPlayer.maxAirJumps = 1;
         doubleJumpSignalVisual.SetActive(true);
 
-        audioSource.PlayOneShot(audioClip);
-        
+        audioSource.Play();
+
         onActivated?.Invoke();
     }
 
