@@ -6,6 +6,8 @@ public class Checkpoint : MonoBehaviour
     public Color activeColor = Color.green;
     public bool isActivated = false; 
 
+    public AudioSource audioSource;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +22,9 @@ public class Checkpoint : MonoBehaviour
     private void AutoSave(GameObject player)
     {
         isActivated = true;
+
+        audioSource.Play();
+        
         string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
 
@@ -43,6 +48,7 @@ public class Checkpoint : MonoBehaviour
         PlayerPrefs.Save();
 
         checkpointSprite.color = activeColor;
+        
 
         PurgeOldCheckpoints();
     }
