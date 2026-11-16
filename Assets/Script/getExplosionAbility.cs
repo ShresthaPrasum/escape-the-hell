@@ -44,9 +44,13 @@ public class getExplosionAbility : MonoBehaviour
 
         }
 
+        else
+        {
+            explosionAbility.enabled = false;
+        }
+
         ResetHoldProgress();
 
-        
         explosionAbilitySignalVisual.SetActive(false);
     }
 
