@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DeathObject
   - Explodable
+  - ExplodableRock
+  - ExplodableRoot
   layers:
   - Default
   - TransparentFX

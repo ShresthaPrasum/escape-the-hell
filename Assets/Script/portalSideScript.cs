@@ -28,6 +28,8 @@ public class portalPillar : MonoBehaviour
 
     private string sceneName;
 
+    public AudioSource audioSource;
+
 
     void Start()
     {
@@ -98,6 +100,8 @@ public class portalPillar : MonoBehaviour
     private void ActivateObject()
     {
         isActivated = true;
+
+        audioSource.Play();
 
         ResetHoldProgress();
 

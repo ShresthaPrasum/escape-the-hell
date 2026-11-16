@@ -7,7 +7,9 @@ public class explosionEffector : MonoBehaviour
 
     public KeyCode explodeKey = KeyCode.Q;
 
-    public GameObject explosionParticlePrefab;
+    public GameObject rootExplosionParticlePrefab;
+
+    public GameObject rockExplosionParticlePrefab;
 
     public ParticleSystem explosionParticleSystem;
 
@@ -21,6 +23,10 @@ public class explosionEffector : MonoBehaviour
 
     private float nextExplosionTime = 0f;
 
+
+    [Header("Targeter")]
+
+    public string[] targeter = {"RockExplodable", "RootExplodable"};
     void Start()
     {
         if (explosionAudioSource == null)
@@ -50,20 +56,36 @@ public class explosionEffector : MonoBehaviour
     
         foreach(Collider2D col in collidersInRange)
         {
-            if (col.CompareTag("Explodable"))
+            if (HasTargetTag(col))
             {
                 
                 
-                if(explosionParticlePrefab != null)
+                if(col.CompareTag("ExplodableRoot") && rockExplosionParticlePrefab != null)
                 {
-                    Instantiate(explosionParticlePrefab, col.transform.position, Quaternion.identity);
+                    Instantiate(rockExplosionParticlePrefab, col.transform.position, Quaternion.identity);
                 }
-                
+
+                else if(col.CompareTag("ExplodableRock") && rootExplosionParticlePrefab != null)
+                {
+                    Instantiate(rootExplosionParticlePrefab, col.transform.position, Quaternion.identity);
+                }
                 
                 Destroy(col.gameObject);
 
             }
         }
+    }
+
+    private bool HasTargetTag(Collider2D col)
+    {
+        foreach(string tag in targeter)
+        {
+            if(col.CompareTag(tag))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void OnDrawGizmosSelected()

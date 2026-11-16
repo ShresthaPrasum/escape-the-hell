@@ -12,6 +12,8 @@ public class Portal : MonoBehaviour
 
     public float timeToLoad = 1f;
 
+    public AudioSource audioSource;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +21,8 @@ public class Portal : MonoBehaviour
         {
             animator.SetTrigger("OnCollision");
             playerObject.SetActive(false);
-            
+
+
             Invoke("LoadNextScene", timeToLoad);
         }
     }
