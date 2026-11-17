@@ -20,4 +20,11 @@ public class MainMenuManager : MonoBehaviour
     {
         Application.Quit(); 
     }
+
+    public void Restart()
+    {
+        PlayerPrefs.DeleteAll();
+
+        SceneManager.LoadScene(gameSceneName);  
+    }
 }

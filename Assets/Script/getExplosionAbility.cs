@@ -28,6 +28,8 @@ public class getExplosionAbility : MonoBehaviour
 
     private bool isActivated = false;
 
+    public AudioSource audioSource;
+
     void Start()
     {
         if(PlayerPrefs.GetInt("ExplosionAbilityActivated", 0) == 1)
@@ -85,6 +87,7 @@ public class getExplosionAbility : MonoBehaviour
                 if(currentHoldTimer >= requiredHoldTime)
                 {
                     ActivateObject();
+                    audioSource.Play();
                 }
             }
             else

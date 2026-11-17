@@ -63,6 +63,7 @@ public class explosionEffector : MonoBehaviour
         {
             impulseSource.GenerateImpulse();
         }
+        
         Collider2D[] collidersInRange = Physics2D.OverlapCircleAll(transform.position, explosionRadius );
 
         explosionAudioSource.PlayOneShot(explosionAudioClip);
