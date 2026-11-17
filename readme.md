@@ -12,12 +12,18 @@
 - Multiple hazards can kill you instantly
 - Multiple Checkpoints are kept to make the game a bit easier
 - You will learn the game mechanics while you continue playing the game
+- Roots and rocks blocking the path.
+- You are normally destroy the explodable roots and blocks by using exploding ability
+- Huge monster waiting for you which takes you to the portal through it's body
+- Added many sound effects in the game it feels so much better now.
 
 ## Goal
 - To escape the hell and reach heaven
 
 ## Control
 - LeftMousebtn Dragging
+- Press Q for explosion
+- Esc for menu
 
 ## Technology Stack
 - Unity 2d
