@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class explosionEffector : MonoBehaviour
 {
@@ -27,12 +28,20 @@ public class explosionEffector : MonoBehaviour
     [Header("Targeter")]
 
     public string[] targeter = {"RockExplodable", "RootExplodable"};
+
+
+    [Header("Shake")]
+
+    private CinemachineImpulseSource impulseSource;
+
     void Start()
     {
         if (explosionAudioSource == null)
         {
             explosionAudioSource = gameObject.AddComponent<AudioSource>();
         }
+
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
 
@@ -50,6 +59,10 @@ public class explosionEffector : MonoBehaviour
 
     private void TriggerExplosion()
     {
+        if(impulseSource != null)
+        {
+            impulseSource.GenerateImpulse();
+        }
         Collider2D[] collidersInRange = Physics2D.OverlapCircleAll(transform.position, explosionRadius );
 
         explosionAudioSource.PlayOneShot(explosionAudioClip);
